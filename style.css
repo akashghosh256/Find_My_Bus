@@ -4,11 +4,14 @@
 }
 
 .main{
-  width: 100%;
+ 
   background: url(bus_logo.png);
+  background-image: url(bus_logo.png);
+
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+
 }
 
 .navbar{
