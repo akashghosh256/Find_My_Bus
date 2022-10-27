@@ -272,3 +272,36 @@ ul li a:hover{
 }
 
 
+.abt{
+  
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.stand{
+margin-bottom: 5px;
+}
+
+
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 26px;
+  
+}
+
+.sustain{
+
+  font-family:"Helevetica";
+}
+
