@@ -14,6 +14,7 @@
   background-attachment: fixed;
   background-position: center;
   background-size: 122% 112%;
+  background-color:antiquewhite;
   position:absolute;
   top: 0px;
   bottom: 0px;
@@ -28,13 +29,8 @@
   position: relative;
   width: 1200px;
   height: 75px;
-  margin: auto;
-}
-
-.icon{
-  width: 200px;
-  float: MIDDLE;
-  height: 70px;
+  margin-top: 50px;
+  margin-left: 15px;
 }
 
 .logo{
@@ -44,7 +40,9 @@
   padding-left: 20px;
   float: left;
   padding-top: 10px;
-  margin-top: 5px
+  margin-top: 5px;
+  width: 200px;
+  height: 70px;
 }
 
 
