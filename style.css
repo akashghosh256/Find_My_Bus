@@ -4,12 +4,22 @@
 }
 
 .main{
- 
-  background: url(bus_logo.png);
+  position:relative;
 
+}
+
+.main::before{
+  content:"";
+  background-image: url(bus_logo.png);
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: 122% 112%;
+  position:absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right:0px;
+  opacity:0.1;
   
 
 }
