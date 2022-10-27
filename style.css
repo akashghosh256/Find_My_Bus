@@ -1,16 +1,16 @@
 *{
-  margin: 0;
+  margin:0;
   padding: 0;
 }
 
 .main{
  
   background: url(bus_logo.png);
-  background-image: url(bus_logo.png);
 
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  
 
 }
 
