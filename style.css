@@ -34,15 +34,21 @@
 }
 
 .logo{
-  color: #000000;
-  font-size: 40px;
+  color: #0f1419;
+  font-size: 27px;
   font-family: Arial;
+  background-color: #ff781f;
+  border: none;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
   padding-left: 20px;
   float: left;
   padding-top: 10px;
-  margin-top: 5px;
-  width: 200px;
-  height: 70px;
+  margin-top: 10px;
+  /*width: 200px;
+  height: 70px;*/
 }
 
 
@@ -70,7 +76,7 @@ ul li{
 
 ul li a{
   text-decoration: none;
-  color: #000000;
+  color: #0f1419;
   font-family: Arial;
   font-weight: bold;
   transition: 0.4s ease-in-out;
@@ -96,7 +102,7 @@ ul li a:hover{
   background: transparent;
   border: 1px solid #ff7200;
   margin-top: 13px;
-  color: rgb(0, 0, 0);
+  color: #0f1419;
   border-right: none;
   font-size: 16px;
   float: left;
@@ -120,7 +126,7 @@ ul li a:hover{
   cursor: pointer;
 }
 .btn:hover{
-  color: #000;
+  color: #0f1419;
 }
 
 .btn:focus{
@@ -136,7 +142,7 @@ ul li a:hover{
   width: 1200px;
   height: auto;
   margin: auto;
-  color: rgb(0, 0, 0);
+  color: #0f1419;
   position: relative;
 }
 
@@ -172,7 +178,7 @@ ul li a:hover{
 
 .content .cn a{
   text-decoration: none;
-  color: #000;
+  color: #0f1419;
   transition: .3s ease;
 }
 
@@ -248,7 +254,7 @@ ul li a:hover{
 }
 .btnn a{
   text-decoration: none;
-  color: #000;
+  color: #0f1419;
   font-weight: bold;
 }
 .form .link{
@@ -268,7 +274,7 @@ ul li a:hover{
 }
 .icons a{
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #0f1419;
 }
 .icons ion-icon{
   color: #fff;
