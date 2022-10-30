@@ -84,7 +84,7 @@ ul li a{
 
 
 ul li a:hover{
-  color: #ff7200;
+  color: #ff781f;
 }
 
 
@@ -100,7 +100,7 @@ ul li a:hover{
   width: 200px;
   height: 40px;
   background: transparent;
-  border: 1px solid #ff7200;
+  border: 1px solid #ff781f;
   margin-top: 13px;
   color: #0f1419;
   border-right: none;
@@ -115,8 +115,8 @@ ul li a:hover{
 .btn{
   width: 100px;
   height: 40px;
-  background: #ff7200;
-  border: 2px solid #ff7200;
+  background: #ff781f;
+  border: 2px solid #ff781f;
   margin-top: 13px;
   color: #fff;
   font-size: 15px;
@@ -141,9 +141,8 @@ ul li a:hover{
   position: relative;
   width: 1200px;
   height: auto;
-  margin: auto;
+  margin:auto;
   color: #0f1419;
-  position: relative;
 }
 
 .content .par{
@@ -157,18 +156,24 @@ ul li a:hover{
 .content h1{
   font-family: 'Times New Roman';
   font-size: 50px;
-  padding-left: 20px;
-  margin-top: 9%;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  margin-top: 70px;
   letter-spacing: 2px;
 }
 
 .content .cn{
   width: 160px;
   height: 40px;
-  background: #ff7200;
+  background: #ff781f;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  margin-top: 17px;
   margin-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 18px;
   border-radius: 10px;
   cursor: pointer;
@@ -177,13 +182,14 @@ ul li a:hover{
 }
 
 .content .cn a{
+  font-weight: bold;
   text-decoration: none;
   color: #0f1419;
   transition: .3s ease;
 }
 
 .cn:hover{
-  background-color: #fff;
+  background-color:#f5c77e;
 }
 
 .content span{
@@ -265,7 +271,10 @@ ul li a:hover{
 }
 .form .link a{
   text-decoration: none;
-  color: #b2580f;
+  color: antiquewhite;
+}
+.form .link a:hover{
+  color:#ff7200;
 }
 .liw{
   padding-top: 15px;
