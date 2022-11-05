@@ -198,15 +198,20 @@ ul li a:hover{
 }
 
 .logform{
-  width: 250px;
-  height: 380px;
+  /*width: 250px;
+  height: 380px;*/
+  height: 395px;
+  width: 254px;
   background: linear-gradient(to top, rgba(183, 74, 55, 0.8)50%,rgba(183,74,55,0.8)50%);
   position: absolute;
   top: -20px;
   left: 870px;
   transform: translate(0%,-5%);
   border-radius: 10px;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .logform h2{
@@ -249,15 +254,17 @@ ul li a:hover{
   background: #ff7200;
   border: none;
   margin-top: 30px;
+  margin-bottom: 12px;
   font-size: 18px;
   border-radius: 10px;
   cursor: pointer;
-  /*color: #fff;*/
   transition: 0.4s ease;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .btnn:hover{
   background: antiquewhite;
-  /*color: #ff7200;*/
   opacity: 0.8;
 }
 .btnn a{
