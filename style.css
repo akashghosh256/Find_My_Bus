@@ -250,6 +250,9 @@ ul li a:hover{
   justify-content:center;
 }
 
+#remember{
+  margin-right: 4px;
+}
 .logform input:focus{
   outline: none;
 }
