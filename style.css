@@ -210,11 +210,12 @@ ul li a:hover{
 }
 
 .form h2{
-  /*width: 220px;*/
-  font-family: sans-serif;
+  /*width: 220px;
+  font-family: "Roboto";*/
   text-align: center;
   color: antiquewhite;
-  font-size: 22px;
+  font-size: 27px;
+  text-shadow: #0f1419 2px 1px 2px;    /* Format: text-shadow: color  offset-x  offset-y  blur-radius; */ 
   /*background-color: #fff;
   border-radius: 10px;
   margin: 2px;
@@ -229,7 +230,7 @@ ul li a:hover{
   border-top: none;
   border-right: none;
   border-left: none;
-  color: #fff;
+  color: antiquewhite;
   font-size: 15px;
   letter-spacing: 1px;
   margin-top: 30px;
