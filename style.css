@@ -197,7 +197,7 @@ ul li a:hover{
   font-size: 65px
 }
 
-.form{
+.logform{
   width: 250px;
   height: 380px;
   background: linear-gradient(to top, rgba(183, 74, 55, 0.8)50%,rgba(183,74,55,0.8)50%);
@@ -209,7 +209,7 @@ ul li a:hover{
   padding: 25px;
 }
 
-.form h2{
+.logform h2{
   /*width: 220px;
   font-family: "Roboto";*/
   text-align: center;
@@ -222,7 +222,7 @@ ul li a:hover{
   padding: 8px;*/
 }
 
-.form input{
+.logform input{
   width: 240px;
   height: 35px;
   background: transparent;
@@ -237,7 +237,7 @@ ul li a:hover{
   font-family: sans-serif;
 }
 
-.form input:focus{
+.logform input:focus{
   outline: none;
 }
 
@@ -264,19 +264,19 @@ ul li a:hover{
   color: #0f1419;
   font-weight: bold;
 }
-.form .link{
+.logform .link{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   padding-top: 20px;
   text-align: center;
 }
-.form .link a{
+.logform .link a{
   text-decoration: none;
   color: antiquewhite;
   border-bottom: 1px solid antiquewhite;
   border-top: none;
 }
-.form .link a:hover{
+.logform .link a:hover{
   color:#ff7200;
   border-bottom: #ff7200;
 }
