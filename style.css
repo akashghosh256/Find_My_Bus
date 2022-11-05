@@ -239,7 +239,15 @@ ul li a:hover{
   font-size: 15px;
   letter-spacing: 1px;
   margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-family: sans-serif;
+}
+
+.checkbox-wrapper{
+  display:flex;
+  justify-content:center;
 }
 
 .logform input:focus{
