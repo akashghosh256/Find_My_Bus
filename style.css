@@ -210,15 +210,15 @@ ul li a:hover{
 }
 
 .form h2{
-  width: 220px;
+  /*width: 220px;*/
   font-family: sans-serif;
   text-align: center;
-  color: #ff7200;
+  color: antiquewhite;
   font-size: 22px;
-  background-color: #fff;
+  /*background-color: #fff;
   border-radius: 10px;
   margin: 2px;
-  padding: 8px;
+  padding: 8px;*/
 }
 
 .form input{
@@ -272,9 +272,12 @@ ul li a:hover{
 .form .link a{
   text-decoration: none;
   color: antiquewhite;
+  border-bottom: 1px solid antiquewhite;
+  border-top: none;
 }
 .form .link a:hover{
   color:#ff7200;
+  border-bottom: #ff7200;
 }
 .liw{
   padding-top: 15px;
