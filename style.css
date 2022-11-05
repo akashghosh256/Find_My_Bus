@@ -272,7 +272,7 @@ ul li a:hover{
 .form .link a{
   text-decoration: none;
   color: antiquewhite;
-  border-bottom: 1 px solid antiquewhite;
+  border-bottom: 1px solid antiquewhite;
   border-top: none;
 }
 .form .link a:hover{
