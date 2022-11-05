@@ -256,9 +256,9 @@ ul li a:hover{
   transition: 0.4s ease;
 }
 .btnn:hover{
-  /*background: antiquewhite;
-  color: #ff7200;*/
-  opacity: 0.6;
+  background: antiquewhite;
+  /*color: #ff7200;*/
+  opacity: 0.8;
 }
 .btnn a{
   text-decoration: none;
