@@ -79,12 +79,17 @@
             <button class="cn"><a href="#">Search Now 🔎</a></button>
             <b>coming soon! 😉</b>
             
-            <div class="logform">
+            <form class="logform">
                 <h2>Login Here</h2>
                 <input type="text" name="email" placeholder="Enter Email" id="username">
                 <input type="password" name="" placeholder="Enter Password" id="password">
                 <button class="btnn" value="login" id="bton" onclick="validate()"><a href="#">Login</a></button>
-               
+                <!--
+                <button type="submit"> Login </button>
+                -->
+                <label>
+                    <input type="checkbox" checked="checked" id="remember"> Remember Password
+                </label>
 
                 <p class="link">Don't have an account?<br>
                     <a href="#">Sign up here</a>
@@ -108,7 +113,7 @@
                 </div>
 
 
-            </div>
+            </form>
         </div>
         
     </div>

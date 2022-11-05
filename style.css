@@ -222,7 +222,7 @@ ul li a:hover{
   padding: 8px;*/
 }
 
-.logform input{
+.logform input[type=text], input[type=password]{
   width: 240px;
   height: 35px;
   background: transparent;
