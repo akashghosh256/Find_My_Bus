@@ -45,10 +45,7 @@
   padding-right: 20px;
   padding-left: 20px;
   float: left;
-  padding-top: 10px;
   margin-top: 10px;
-  /*width: 200px;
-  height: 70px;*/
 }
 
 
@@ -85,31 +82,6 @@ ul li a{
 
 ul li a:hover{
   color: #ff781f;
-}
-
-
-
-.search{
-  width: 330px;
-  float: left;
-  margin-left: 270px;
-}
-
-.srch{
-  font-family: 'Times New Roman';
-  width: 200px;
-  height: 40px;
-  background: transparent;
-  border: 1px solid #ff781f;
-  margin-top: 13px;
-  color: #0f1419;
-  border-right: none;
-  font-size: 16px;
-  float: left;
-  padding: 10px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-
 }
 
 .btn{
