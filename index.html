@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find My Bus</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src ="index.js"></script>
 
 
@@ -15,6 +16,11 @@
 
             /* Firefox, Chrome, Opera */
             color: #FEC98F;
+        }
+    </style>
+   <style>
+        .logform h2{
+            font-family: "Roboto", sans-serif;
         }
     </style>
 </head>
@@ -47,7 +53,7 @@
 
             </p>
 
-            <p class="par">looking for a bus in a city can be confusing and time taking. 😕
+            <p class="par">Looking for a bus in a city can be confusing and time taking. 😕
                 <br>But you don't have to worry about that anymore. <br>
             </p>
 
@@ -58,7 +64,7 @@
                  help users by suggesting the bus along with its bus number and route.
             </p>
 
-            <p class="par">We will soon be launching it on Kolkata. 🏙️<br> 
+            <p class="par">We will soon be launching it in Kolkata. 🏙️<br> 
                
             </p>
 
@@ -73,12 +79,19 @@
             <button class="cn"><a href="#">Search Now 🔎</a></button>
             <b>coming soon! 😉</b>
             
-            <div class="form">
+            <form class="logform">
                 <h2>Login Here</h2>
                 <input type="text" name="email" placeholder="Enter Email" id="username">
                 <input type="password" name="" placeholder="Enter Password" id="password">
                 <button class="btnn" value="login" id="bton" onclick="validate()"><a href="#">Login</a></button>
-               
+                <!--
+                <button type="submit"> Login </button>
+                -->
+                <label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="remember"> Remember Password
+                    </div>
+                </label>
 
                 <p class="link">Don't have an account?<br>
                     <a href="#">Sign up here</a>
@@ -102,11 +115,9 @@
                 </div>
 
 
-            </div>
+            </form>
         </div>
         
-    </div>
-   
     </div>
 
 
