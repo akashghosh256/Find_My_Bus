@@ -11,9 +11,13 @@
    {% include 'nav.html' %}
 
    <div class="container">
+      {% include 'image_slides.html' %}
+      <!-- <h1 class="animate__bounce">test text</h1> -->
         {% include 'form.html' %}
 
-      <h2 class="text-center  mt-4 mb-4">CONVENIENCE ON-THE-GO.</h2>
+      <!-- <h2 class="text-center mt-4 mb-4 animate__flash" class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2> -->
+
+      <div class="text-center mt-4 mb-4"><h2 class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2></div>
       <div class="row" style="margin-bottom: 16px;">
          <div class="col-md-6">
             <p class="lead">
@@ -27,7 +31,7 @@
 
          <div class="d-none d-md-block col-md-6">
             <img
-               src="static/girl.jpg"
+               src="static/girl.jpg" class="animate__headShake"
                style="height:320px;border-radius: 4px;">
          </div>
 
@@ -36,6 +40,7 @@
          
 
          {% include 'footer.html' %}
+         
 </body>
 
 </html>
