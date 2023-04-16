@@ -1,28 +1,49 @@
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Find My Bus</a> -->
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="static/logos.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-          Find My Bus
-          </a>
-        
-        </div>
-      </nav>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">About Us</a>
-          <a class="nav-link" href="#">Help</a>
-          <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-        </div>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="/">My Website</a> -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="static/logos.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Find My Bus
+        </a>
+      
       </div>
+    </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('hello') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('help') }}">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/about' %}active{% endif %}" target="_blank"  href="https://github.com/akashghosh256/Find_My_Bus"><i class="bi bi-code-slash"></i></a>
+        </li>
+        
+      </ul>
     </div>
-  </nav>
-  <div style="height:80px"></div>
+  </div>
+</nav>
+<div style="height:80px"></div>
+
+<style>
+  .navbar-nav .active {
+  color: #000000;
+  
+}
+
+</style>

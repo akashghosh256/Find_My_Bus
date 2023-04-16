@@ -11,6 +11,18 @@ def hello():
  
   return  render_template('home.html')
 
+@app.route("/about")
+def about():
+  return render_template('about.html')
+
+@app.route("/help")
+def help():
+  return render_template('help.html')
+
+@app.route("/code")
+def  github():
+  return render_template('about.html')
+
 # @app.route("/job/<id>")
 # def show_job(id):
 #   job = load_job_from_db(id)

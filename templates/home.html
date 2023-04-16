@@ -3,44 +3,52 @@
 
 <head>
    <title>Careers</title>
-      {% include 'bootstrap.html' %}
-  
+   {% include 'bootstrap.html' %}
+
 </head>
 
 <body>
    {% include 'nav.html' %}
-
+   
    <div class="container">
-      {% include 'image_slides.html' %}
-      <!-- <h1 class="animate__bounce">test text</h1> -->
-        {% include 'form.html' %}
-
-      <!-- <h2 class="text-center mt-4 mb-4 animate__flash" class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2> -->
-
-      <div class="text-center mt-4 mb-4"><h2 class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2></div>
-      <div class="row" style="margin-bottom: 16px;">
-         <div class="col-md-6">
-            <p class="lead">
-                Are you looking for a Bus ?<br>
-                Aha! we got you covered  <b>FindMyBus is the best place to find your Bus.</b><br> 
-                But we can't promise to get your bus pick-up from your door steps :) <br> 
-                But we can help you to find your bus and get you to your destination. <br>
-                Just enter your location along with your destination and we will do the rest for you.<br>
-            </p>
-         </div>
-
-         <div class="d-none d-md-block col-md-6">
-            <img
-               src="static/girl.jpg" class="animate__headShake"
-               style="height:320px;border-radius: 4px;">
-         </div>
-
+      <div class="reveal">
+         {% include 'image_slides.html' %}
       </div>
-         
-         
+      <!-- <h1 class="animate__bounce">test text</h1> -->
+      <div class="reveal">
+         {% include 'form.html' %}
+      </div>
 
+
+      <div class="reveal">
+         <!-- <h2 class="text-center mt-4 mb-4 animate__flash" class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2> -->
+         <div class="text-center mt-4 mb-4 ">
+            <h2 class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2>
+         </div>
+         <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+               <p class="lead">
+                  Are you looking for a Bus ?<br>
+                  Aha! we got you covered <b>FindMyBus is the best place to find your Bus.</b><br>
+                  But we can't promise to get your bus pick-up from your door steps :) <br>
+                  But we can help you to find your bus and get you to your destination. <br>
+                  Just enter your location along with your destination and we will do the rest for you.<br>
+               </p>
+            </div>
+
+            <div class="d-none d-md-block col-md-6">
+               <img src="static/girl.jpg" class="animate__headShake" style="height:320px;border-radius: 4px;">
+            </div>
+
+         </div>
+      </div>
+
+      <div class="reveal">
          {% include 'footer.html' %}
-         
+      </div>
+   </div>
+
+   
 </body>
 
 </html>

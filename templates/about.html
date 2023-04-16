@@ -1,0 +1,131 @@
+{% include "bootstrap.html" %}
+
+{% include "nav.html" %}
+
+<div class="container my-5">
+    <div style="height:40px"></div>
+    <!-- <h1  class="text-center  ">About Us</h1> -->
+    <div class="waviy"><p>
+        <span style="--i:1">A</span>
+        <span style="--i:2">b</span>
+        <span style="--i:3">o</span>
+        <span style="--i:4">u</span>
+        <span style="--i:5">t</span>
+        <span style="--i:6"> </span>
+        <span style="--i:6"> </span>
+        <span style="--i:6"> </span>
+        <span style="--i:7">U</span>
+        <span style="--i:8">s</span></p>
+       </div>
+       <hr>
+
+    <p class="lead">
+        <br>
+        Greetings, esteemed audience,<br>
+<br>
+<p class="reveal">
+Find My Bus is a revolutionary website that has redefined public transportation by allowing users to track their bus in real-time, providing them with the much-needed peace of mind and helping them plan their commute more efficiently. With this website, users never again have to worry about missing their bus or standing outside in inclement weather, waiting for it to arrive.<br>
+<br></p>
+<p class="reveal">
+One of the hallmarks of Find My Bus is its user-friendly interface. The website is designed with simplicity and intuitiveness in mind, making it easy for users to navigate and track their buses. Whether you are an experienced commuter or a first-time user, you will find the website effortless to use.<br>
+<br></p>
+<p>
+Moreover, the website's accuracy is exceptional. Find My Bus provides users with up-to-date information on bus locations and arrival times, guaranteeing the latest information is at their disposal. This information ensures users can plan their commutes with confidence and arrive at their destinations on time.<br>
+<br></p>
+<p class="reveal">
+Find My Bus is more than just a website. It is an exceptional tool that offers users control over their commutes, making their daily transportation experience easier and stress-free. By using our website, users can save time, reduce stress, and transform their daily commutes into enjoyable experiences.<br>
+<br></p>
+<p class="reveal">
+Whether you are a student, a professional, or a public transportation user, I highly recommend that you give Find My Bus a try. With our website, you can take the guesswork out of your commute and enjoy a seamless, stress-free journey.<br>
+<br></p>
+<p class="reveal">
+In conclusion, I thank you for your attention and your interest in Find My Bus. Join us today and let us help you make your daily commute experience smoother and more enjoyable.
+</p>
+    <hr>
+    <h2 class="animate-charcter">Our Team</h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in elit at elit pretium efficitur. Maecenas non erat blandit, convallis odio a, vestibulum tortor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="">
+                <div class="card-body">
+                    <h4 class="card-title animate-charcter">Jane Smith</h4>
+                    <p class="card-text">Praesent vitae arcu eget erat bibendum fringilla. Aenean tempor lectus mauris, id commodo quam molestie at. Fusce tempor lacinia diam, eu euismod metus. </p>
+                </div>
+            </div>
+        </div>
+        
+<!-- -------------------------------------------------------------------------------------------------- -->
+<style>
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #111; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #000000;
+  /* text-transform: uppercase; */
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i));
+
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+.animate-charcter
+{
+    text-align: center;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+  </style>
+
+ {% include 'footer.html' %}
+
