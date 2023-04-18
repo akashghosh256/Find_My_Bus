@@ -21,7 +21,7 @@ def help():
 
 @app.route("/code")
 def  github():
-  return render_template('about.html')
+  return render_template()
 
 # @app.route("/job/<id>")
 # def show_job(id):

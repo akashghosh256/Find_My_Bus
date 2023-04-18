@@ -9,7 +9,7 @@
     <!-- <a class="navbar-brand" href="/">My Website</a> -->
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="static/logos.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
         Find My Bus
         </a>
@@ -28,10 +28,10 @@
           <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('help') }}">Help</a>
+          <a class="nav-link {% if request.path == '/help' %}active{% endif %}" href="{{ url_for('help') }}">Help</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.path == '/about' %}active{% endif %}" target="_blank"  href="https://github.com/akashghosh256/Find_My_Bus"><i class="bi bi-code-slash"></i></a>
+          <a class="nav-link {% if request.path == '' %}active{% endif %}" target="_blank"  href="https://github.com/akashghosh256/Find_My_Bus"> Contribute <i class="bi bi-github"></i></a>
         </li>
         
       </ul>
@@ -43,6 +43,7 @@
 <style>
   .navbar-nav .active {
   color: #000000;
+  text-decoration: underline;
   
 }
 
