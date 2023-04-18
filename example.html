@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Find My Bus</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Bus Help</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Find My Bus</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/about">About Us</a>
-                </li>
-            </ul>
+  <div class="container">
+    <h1 class="text-center mb-5">Find My Bus Help</h1>
+    <div class="row">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card p-4 bg-primary text-white">
+          <h2 class="mb-4">What is Find My Bus?</h2>
+          <p class="lead mb-4">Find My Bus is a website that helps you track the location of buses in real-time. You can search for your bus by route or by bus number, and see its current location on a map.</p>
+          <a href="#" class="btn btn-light">Get Started</a>
         </div>
-    </nav>
-    
-    <!-- Page Content -->
-    <div class="container my-5">
-        <h1>About Us</h1>
-        <p class="lead">Find My Bus is an online platform that helps commuters track buses in real-time.</p>
-        <hr>
-        <h2>Our Team</h2>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in elit at elit pretium efficitur. Maecenas non erat blandit, convallis odio a, vestibulum tortor.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Jane Smith</h4>
-                        <p class="card-text">Praesent vitae arcu eget erat bibendum fringilla. Aenean tempor lectus mauris, id commodo quam molestie at. Fusce tempor lacinia diam, eu euismod metus. </p>
-                    </div>
-                </div>
-            </div>
-            
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4 bg-secondary text-white">
+          <h2 class="mb-4">How do I use Find My Bus?</h2>
+          <p class="lead mb-4">To use Find My Bus, simply enter your bus route or bus number into the search bar on the home page. The website will display a map with the location of your bus in real-time. You can also filter your search by date and time to see the bus's location at a specific time.</p>
+          <a href="#" class="btn btn-light">Search Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="card p-4 bg-success text-white">
+          <h2 class="mb-4">Is Find My Bus free to use?</h2>
+          <p class="lead mb-4">Yes, Find My Bus is completely free to use. You don't need to create an account or pay any fees to access the website.</p>
+          <a href="#" class="btn btn-light">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4 bg-info text-white">
+          <h2 class="mb-4">What if I can't find my bus?</h2>
+          <p class="lead mb-4">If you can't find your bus on the website, it's possible that the bus is not equipped with GPS tracking or the tracking information is not available. In this case, we recommend contacting your local bus service provider for more information.</p>
+          <a href="#" class="btn btn-light">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
