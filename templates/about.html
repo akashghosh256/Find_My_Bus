@@ -2,21 +2,20 @@
 
 {% include "nav.html" %}
 
-<div class="container my-5">
-    <div style="height:40px"></div>
-    <!-- <h1  class="text-center  ">About Us</h1> -->
-    <div class="waviy"><p>
-        <span style="--i:1">A</span>
-        <span style="--i:2">b</span>
-        <span style="--i:3">o</span>
-        <span style="--i:4">u</span>
-        <span style="--i:5">t</span>
-        <span style="--i:6"> </span>
-        <span style="--i:6"> </span>
-        <span style="--i:6"> </span>
-        <span style="--i:7">U</span>
-        <span style="--i:8">s</span></p>
-       </div>
+<div class="container ">
+    <div style="height:5px"></div>
+    <div class="waviy1"><p>
+      <span style="--i:1">A</span>
+      <span style="--i:2">b</span>
+      <span style="--i:3">o</span>
+      <span style="--i:4">u</span>
+      <span style="--i:5">t</span>
+      <span style="--i:6"> </span>
+      <span style="--i:6"> </span>
+      <span style="--i:6"> </span>
+      <span style="--i:7">U</span>
+      <span style="--i:8">s</span></p>
+     </div>
        <hr>
 
     <p class="lead">
@@ -46,22 +45,25 @@ In conclusion, I thank you for your attention and your interest in Find My Bus. 
     <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="">
+                <img class="card-img-top" src="static/team.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">John Doe</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in elit at elit pretium efficitur. Maecenas non erat blandit, convallis odio a, vestibulum tortor.</p>
+                    <h4 class="card-title animate-charcter">From the Classroom to the Community</h4>
+                    <p class="card-text"> From a small group of college students who wanted to improve transportation for their community, Find My Bus has grown into a successful project thanks to our talented team of experts. With a shared passion for innovation and a commitment to excellence, our team has developed cutting-edge technology that's changing the way we navigate public transportation. Whether you need real-time bus tracking or other exciting features, our team has the skills and expertise to deliver exceptional results. Get to know us better and see how we can help you take your transportation experience to the next level.</p>
                 </div>
             </div>
         </div>
+        
         <div class="col-lg-4 col-md-6 mb-4">
+          <a href="https://github.com/akashghosh256/Find_My_Bus" target="_blank"  style="text-decoration: none">
             <div class="card h-100">
                 <img class="card-img-top" src="static/github.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title animate-charcter">Github</h4>
-                    <p class="card-text">Praesent vitae arcu eget erat bibendum fringilla. Aenean tempor lectus mauris, id commodo quam molestie at. Fusce tempor lacinia diam, eu euismod metus. </p>
+                    <p class="card-text" >Contributing to the Find My Bus project on GitHub is a great way to help improve the real-time tracking and journey planning platform for commuters. You can report issues, contribute code, improve documentation, spread the word, and make a positive impact on the lives of people who rely on public transportation. Thank you for considering contributing to our open-source project!</p>
                 </div>
-            </div>
+            </div></a>
         </div>
+    
         
 <!-- -------------------------------------------------------------------------------------------------- -->
 <style>
@@ -74,24 +76,18 @@ In conclusion, I thank you for your attention and your interest in Find My Bus. 
   box-sizing: border-box;
 }
 
-body {
-  /* background-color: #111; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.waviy {
+
+.waviy1 {
   position: relative;
 }
-.waviy span {
+.waviy1 span {
   position: relative;
   display: inline-block;
   font-size: 3rem;
   color: #000000;
   /* text-transform: uppercase; */
-  animation: flip 1s;
-  animation-delay: calc(.2s * var(--i));
+  animation: flip 3s;
+  animation-delay: calc(.3s * var(--i));
 
 }
 @keyframes flip {
