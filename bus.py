@@ -1,9 +1,17 @@
 from flask import Flask, render_template, request
 import firebase_admin
 from firebase_admin import credentials, db
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from .env file
+
+serviceAccKey = os.getenv("FIREBASE_KEY")
+flaskApp = os.getenv("FLASK_APP")
+flaskDebug = os.getenv("FLASK_DEBUG")
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('path/to/serviceAccountKey.json')
+cred = credentials.Certificate(serviceAccKey)
 
 # Initialize the app with a custom auth variable, limiting the server's access
 firebase_admin.initialize_app(cred, {
