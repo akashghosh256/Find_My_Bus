@@ -25,7 +25,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 # Get a database reference
-ref = db.reference('restricted-access/data')
+# ref = db.reference('restricted-access/data')
 
 # Define the endpoint to insert the data
 @app.route('/insertdata')
