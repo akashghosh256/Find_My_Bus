@@ -14,7 +14,7 @@ flaskApp = os.getenv("FLASK_APP")
 flaskDebug = os.getenv("FLASK_DEBUG")
 
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate(serviceAccKey)
+cred = credentials.Certificate('serviceAccountKey.json')
 
 # Initialize the app with a custom auth variable, limiting the server's access
 firebase_admin.initialize_app(cred, {
