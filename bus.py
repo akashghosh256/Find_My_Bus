@@ -31,7 +31,7 @@ firebase_admin.initialize_app(cred, {
 @app.route('/insertdata')
 def insertdata():
     # Load the CSV file
-    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES - Sheet1.csv") as csvfile:
+    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES- Sheet1.csv") as csvfile:
         reader = csv.DictReader(csvfile)
         # Create a reference to the 'buses' node in the database
         buses_ref = db.reference('buses')
@@ -53,6 +53,25 @@ def insertdata():
                 'route' : row['route']
             })
         return 'Data inserted successfully!'
+    
+# Define the endpoint to update the data
+@app.route('/updatedata')
+def updatedata():
+    # Load the CSV file
+    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES- Sheet1.csv") as csvfile:
+        reader = csv.DictReader(csvfile)
+        # Create a reference to the 'buses' node in the database
+        buses_ref = db.reference('buses')
+        # Loop through each row in the CSV file and update the route field of the corresponding child node
+        for row in reader:
+            # Use the Bus ID as the key for the child node
+            bus_id = row['bus_id']
+            # Create a reference to the child node using the bus ID
+            bus_ref = buses_ref.child(bus_id)
+            # Update the 'route' field of the child node
+            bus_ref.update({'route': row['route']})
+        return 'Data updated successfully!'
+
 
 @app.route("/")
 @app.route("/home")
