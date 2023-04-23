@@ -71,6 +71,45 @@ def updatedata():
             # Update the 'route' field of the child node
             bus_ref.update({'route': row['route']})
         return 'Data updated successfully!'
+    
+@app.route('/departure')
+def departure():
+    #Loading the csv file
+    with open("C:\\Users\\HP\\Downloads\\BUS_DEPART - Sheet1.csv") as csvfile:
+        reader = csv.DictReader(csvfile)
+        # Create a reference to the 'departure' node in the database
+        departure_ref = db.reference('departure')
+        #Looping through each row in the csv file and inserting the data in the database
+        for row in reader:
+            # Use the departure value as the key for the child node
+            departure_value = row['departure']
+            #Creating a reference to the child node
+            new_departure_ref = departure_ref.child(departure_value)
+        
+            # Set the data for the child node
+            new_departure_ref.set(True)
+
+        return 'Departures added successfully!'
+
+@app.route('/arrival')
+def arrival():
+    #Loading the csv file
+    with open("C:\\Users\\HP\\Downloads\\BUS_ARRIVE - Sheet1.csv") as csvfile:
+        reader = csv.DictReader(csvfile)
+        # Create a reference to the 'arrival' node in the database
+        arrival_ref = db.reference('arrival')
+        #Looping through each row in the csv file and inserting the data in the database
+        for row in reader:
+            # Use the departure value as the key for the child node
+            arrival_value = row['arrival']
+            #Creating a reference to the child node
+            new_arrival_ref = arrival_ref.child(arrival_value)
+        
+            # Set the data for the child node
+            new_arrival_ref.set(True)
+
+        return 'Arrivals added successfully!'
+
 
 
 @app.route("/")
