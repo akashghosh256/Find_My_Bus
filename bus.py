@@ -138,15 +138,15 @@ def creating_routes():
     routes_ref.set(routes_dict)
     return "Routes added successfully!"
 
-@app.route('/getBusData')
-def getBusData():
+@app.route('/getArrivalData')
+def getArrivalData():
     arrival_ref = db.reference('arrival')
     arrival_data = arrival_ref.get()
 
     return arrival_data
 
-@app.route('/getArrivalData')
-def getArrivalData():
+@app.route('/getBusData')
+def getBusData():
     buses_ref = db.reference('buses')
     buses_data = buses_ref.get()
 
