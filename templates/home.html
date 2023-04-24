@@ -20,7 +20,7 @@
         </p>
     </div>
 </div>
-<div class="d-flex justify-content-center">
+<!-- <div class="d-flex justify-content-center">
     <form method="POST" action="{{ url_for('search') }}" class="form-inline">
         <label for="origin" class="mr-2">Origin:</label>
         <select name="origin" id="origin" class="form-control">
@@ -38,7 +38,29 @@
         <br>
         <button type="submit">Search</button>
     </form>
+</div> -->
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh">
+    <form method="POST" action="{{ url_for('search') }}" class="mx-auto">
+        <div class="form-group">
+          <label for="origin">Origin:</label>
+          <select class="form-control" name="origin" id="origin">
+            {% for o in unique_origins %}
+              <option value="{{ o }}">{{ o }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination:</label>
+          <select class="form-control" name="destination" id="destination">
+            {% for d in unique_destinations %}
+              <option value="{{ d }}">{{ d }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
 </div>
+
 {% endblock %}
 
 
