@@ -117,7 +117,7 @@ def creating_routes():
     # Retrieve the data from the buses node
     buses_data = buses_ref.get()
     #print(type(buses_data))
-    buses_dict = {bus['bus_id']: bus for bus in buses_data}
+    buses_dict = {bus['bus_id']: bus for bus in buses_data if 'bus_id' in bus}
 
     # Initializing an empty dictionary to store the routes
     routes_dict = {}
@@ -138,7 +138,19 @@ def creating_routes():
     routes_ref.set(routes_dict)
     return "Routes added successfully!"
 
+@app.route('/getBusData')
+def getBusData():
+    arrival_ref = db.reference('arrival')
+    arrival_data = arrival_ref.get()
 
+    return arrival_data
+
+@app.route('/getArrivalData')
+def getArrivalData():
+    buses_ref = db.reference('buses')
+    buses_data = buses_ref.get()
+
+    return buses_data
 
 
 @app.route("/")
