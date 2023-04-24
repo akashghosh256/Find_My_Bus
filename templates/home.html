@@ -39,11 +39,11 @@
         <button type="submit">Search</button>
     </form>
 </div> -->
-<div class="d-flex align-items-center justify-content-center" style="height: 100vh">
+<div class="d-flex align-items-center justify-content-center">
     <form method="POST" action="{{ url_for('search') }}" class="mx-auto">
         <div class="form-group">
           <label for="origin">Origin:</label>
-          <select class="form-control" name="origin" id="origin">
+          <select class="form-control mr-2" name="origin" id="origin">
             {% for o in unique_origins %}
               <option value="{{ o }}">{{ o }}</option>
             {% endfor %}
@@ -51,7 +51,7 @@
         </div>
         <div class="form-group">
           <label for="destination">Destination:</label>
-          <select class="form-control" name="destination" id="destination">
+          <select class="form-control mr-2" name="destination" id="destination">
             {% for d in unique_destinations %}
               <option value="{{ d }}">{{ d }}</option>
             {% endfor %}
