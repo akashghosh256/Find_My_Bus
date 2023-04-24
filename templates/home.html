@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block css %}
+    <link rel="stylesheet" href="static\\home.css">
+{% endblock %}
+
 {% block title %}
     FindMyBus-Home
 {% endblock %}
@@ -20,25 +24,7 @@
         </p>
     </div>
 </div>
-<!-- <div class="d-flex justify-content-center">
-    <form method="POST" action="{{ url_for('search') }}" class="form-inline">
-        <label for="origin" class="mr-2">Origin:</label>
-        <select name="origin" id="origin" class="form-control">
-            {% for o in unique_origins %}
-                <option value="{{ o }}">{{ o }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <label for="destination" class="mr-2">Destination:</label>
-        <select name="destination" id="destination" class="form-control">
-            {% for d in unique_destinations %}
-                <option value="{{ d }}">{{ d }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <button type="submit">Search</button>
-    </form>
-</div> -->
+
 <div class="d-flex align-items-center justify-content-center">
     <form method="POST" action="{{ url_for('search') }}" class="mx-auto">
         <div class="form-group">
