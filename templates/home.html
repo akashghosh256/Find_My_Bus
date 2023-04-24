@@ -20,6 +20,23 @@
         </p>
     </div>
 </div>
+<form method="POST" action="{{ url_for('search') }}" class="form-inline">
+    <label for="origin" class="mr-2">Origin:</label>
+    <select name="origin" id="origin">
+        {% for o in unique_origins %}
+            <option value="{{ o }}">{{ o }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="destination">Destination:</label>
+    <select name="destination" id="destination">
+        {% for d in unique_destinations %}
+            <option value="{{ d }}">{{ d }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <button type="submit">Search</button>
+</form>
 {% endblock %}
 
 
