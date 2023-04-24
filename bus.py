@@ -110,6 +110,34 @@ def arrival():
 
         return 'Arrivals added successfully!'
 
+@app.route('/getting_routes')
+def getting_routes():
+
+   #Creating a reference to the database
+    buses_ref = db.reference('buses')
+    routes_ref = db.reference('routes')
+
+    # Retrieve the data from the buses node
+    buses_data = buses_ref.get()
+
+    # Initialize an empty dictionary to store the routes
+    routes_dict = {}
+
+    # Loop through each bus and add it to the appropriate route
+    for bus_id, bus_data in buses_data.items():
+        origin = bus_data['origin']
+        destination = bus_data['destination']
+    
+        route_key = f"{origin}-{destination}"
+        if route_key in routes_dict:
+            routes_dict[route_key].append(bus_id)
+        else:
+            routes_dict[route_key] = [bus_id]
+
+    # Write the routes to the routes node
+    routes_ref.set(routes_dict)
+
+
 
 
 @app.route("/")
