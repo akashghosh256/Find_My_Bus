@@ -40,6 +40,7 @@ def insertdata():
             bus_ref = buses_ref.child(bus_id)
             # Setting the data for the child node
             bus_ref.set({
+                'bus_id': row['bus_id'],
                 'bus_no': row['bus_no'],
                 'origin': row['origin'],
                 'destination': row['destination'],
@@ -66,7 +67,7 @@ def updatedata():
             # Creating a reference to the child node using the bus ID
             bus_ref = buses_ref.child(bus_id)
             # Updating the 'route' field of the child node
-            bus_ref.update({'route': row['route']})
+            bus_ref.update({'bus_id': row['bus_id']})
         return 'Data updated successfully!'
     
 @app.route('/departure')
