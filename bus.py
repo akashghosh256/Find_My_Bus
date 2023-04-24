@@ -28,7 +28,7 @@ firebase_admin.initialize_app(cred, {
 @app.route('/insertdata')
 def insertdata():
     # Loading the CSV file
-    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES- Sheet1.csv") as csvfile:
+    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES - Sheet1.csv") as csvfile:
         reader = csv.DictReader(csvfile)
         # Creating a reference to the 'buses' node in the database
         buses_ref = db.reference('buses')
@@ -56,7 +56,7 @@ def insertdata():
 @app.route('/updatedata')
 def updatedata():
     # Loading the CSV file
-    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES- Sheet1.csv") as csvfile:
+    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES - Sheet1.csv") as csvfile:
         reader = csv.DictReader(csvfile)
         # Creating a reference to the 'buses' node in the database
         buses_ref = db.reference('buses')
