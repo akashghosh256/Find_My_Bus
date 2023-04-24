@@ -167,8 +167,12 @@ def getOriDest():
         unique_origins.add(bus_data['origin'])
         unique_destinations.add(bus_data['destination'])
 
+    # Counting the number of unique origin and destination values
+    num_origins = len(unique_origins)
+    num_destinations = len(unique_destinations)
+
     # Returning the unique origin and destination sets as a response to the client
-    return f"Unique origins: {unique_origins}, Unique destinations: {unique_destinations}"
+    return f"Unique origins: {unique_origins}, Unique destinations: {unique_destinations}" + f"Unique Origin Count: {num_origins}, Unique destinations count: {num_destinations}"
 
 
 
