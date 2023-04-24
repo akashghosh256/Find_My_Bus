@@ -121,8 +121,15 @@ def creating_routes():
 
     # Retrieve the data from the buses node
     buses_data = buses_ref.get()
+    #Filtering out the null values
+    buses_data = [bus for bus in buses_data if bus is not None]
     #print(type(buses_data))
-    buses_dict = {bus['bus_id']: bus for bus in buses_data if 'bus_id' in bus}
+    
+    #Storing the buses_data in a dictionary
+    buses_dict = {bus['bus_id']: bus for bus in buses_data}
+
+
+
 
     # Initializing an empty dictionary to store the routes
     routes_dict = {}
@@ -131,8 +138,6 @@ def creating_routes():
     for bus_id, bus_data in buses_dict.items():
         origin = bus_data['origin']
         destination = bus_data['destination']
-        
-    
         route_key = f"{origin}-{destination}"
         if route_key in routes_dict:
             routes_dict[route_key].append(bus_id)
