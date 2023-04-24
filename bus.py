@@ -110,8 +110,8 @@ def arrival():
 
         return 'Arrivals added successfully!'
 
-@app.route('/getting_routes')
-def getting_routes():
+@app.route('/creating_routes')
+def creating_routes():
 
    #Creating a reference to the database
     buses_ref = db.reference('buses')
@@ -136,6 +136,7 @@ def getting_routes():
 
     # Write the routes to the routes node
     routes_ref.set(routes_dict)
+    return "Routes added successfully!"
 
 
 
