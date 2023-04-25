@@ -191,44 +191,70 @@ def getBusData():
     return buses_data
 
 
+# @app.route("/")
+# @app.route("/home")
+# def home_page():
+#     # Creating a reference to the buses node in the database
+#     buses_ref = db.reference('buses')
+
+#     # Retrieving the data from the buses node
+#     buses_data = buses_ref.get()
+#     #Filtering out the null values
+#     buses_data = [bus for bus in buses_data if bus is not None]
+
+#     #Storing the buses_data in a dictionary
+#     buses_dict = {bus['bus_id']: bus for bus in buses_data}
+
+#     # Initializing empty sets for storing unique origin and destination values
+#     unique_origins = set()
+#     unique_destinations = set()
+
+#     # Looping through each bus and adding its origin and destination to the respective sets
+#     for bus_data in buses_dict.values():
+#         unique_origins.add(bus_data['origin'])
+#         unique_destinations.add(bus_data['destination'])
+
+#     # Converting the sets to lists and sorting them
+#     unique_origins = sorted(list(unique_origins))
+#     unique_destinations = sorted(list(unique_destinations))
+
+#     return render_template('home.html', unique_origins=unique_origins, unique_destinations=unique_destinations)
+
+
 @app.route("/")
 @app.route("/home")
 def home_page():
-    # Creating a reference to the buses node in the database
+   #Creating a reference to the database
     buses_ref = db.reference('buses')
-
-    # Retrieving the data from the buses node
+    # Retrieve the data from the buses node
     buses_data = buses_ref.get()
     #Filtering out the null values
     buses_data = [bus for bus in buses_data if bus is not None]
-
+    
     #Storing the buses_data in a dictionary
     buses_dict = {bus['bus_id']: bus for bus in buses_data}
 
-    # Initializing empty sets for storing unique origin and destination values
-    unique_origins = set()
-    unique_destinations = set()
+    #Creating an empty list to store the route values
+    eachRoute = []
 
-    # Looping through each bus and adding its origin and destination to the respective sets
-    for bus_data in buses_dict.values():
-        unique_origins.add(bus_data['origin'])
-        unique_destinations.add(bus_data['destination'])
+    # Looping through each bus and adding it to the appropriate route
+    for bus_id, bus_data in buses_dict.items():
+        origin = bus_data['origin']
+        destination = bus_data['destination']
+        route_key = f"{origin}-{destination}"
+        eachRoute.append(route_key)
 
-    # Converting the sets to lists and sorting them
-    unique_origins = sorted(list(unique_origins))
-    unique_destinations = sorted(list(unique_destinations))
-
-    return render_template('home.html', unique_origins=unique_origins, unique_destinations=unique_destinations)
+    return render_template('home.html', eachRoute = eachRoute)
 
 # Route for the search page
 @app.route('/search', methods=['POST'])
 def search():
     # Retrieving the origin and destination values from the form data
-    origin = request.form['origin']
-    destination = request.form['destination']
+    selectedRoute = request.form['routes']
+    # destination = request.form['destination']
 
     # Generating the URL for the search results page
-    search_url = url_for('search_results', origin=origin, destination=destination)
+    search_url = url_for('search_results', selectedRoute = selectedRoute)
 
     # Redirecting to the search results page
     return redirect(search_url)
@@ -238,17 +264,17 @@ def search():
 @app.route('/search_results')
 def search_results():
     # Retrieving the origin and destination values from the URL parameters
-    origin = request.args.get('origin')
-    destination = request.args.get('destination')
+    selectedRoute = request.args.get('routes')
+    # destination = request.args.get('destination')
 
     # Querying the database for buses that match the origin and destination
     routes_ref = db.reference('routes')
-    route_key = f"{origin}-{destination}"
-    route_data = routes_ref.child(route_key).get()
+    # route_key = f"{origin}-{destination}"
+    route_data = routes_ref.child(selectedRoute).get()
 
     # If the route doesn't exist, returning an error message
     if route_data is None:
-        return f"No buses found for route {route_key}"
+        return f"No buses found for route {selectedRoute}"
 
     # Retrieving the data for each bus in the route
     buses_ref = db.reference('buses')
@@ -260,7 +286,7 @@ def search_results():
 
     # If no buses were found for the route, return an error message
     if len(buses_data) == 0:
-        return f"No buses found for route {route_key}"
+        return f"No buses found for route {selectedRoute}"
 
     # Return the list of buses that match the route
     return render_template('search_results.html', buses=buses_data)
