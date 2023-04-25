@@ -11,6 +11,7 @@
    {% include 'nav.html' %}
    
    <div class="container">
+      <h1 class=" fst-italic fw-normal text-center mt-0  mb-2 animate__heartBeat" style="@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Roboto:ital,wght@1,100&display=swap');"> Find My Bus</h1>
       <div class="reveal">
          {% include 'image_slides.html' %}
       </div>
@@ -19,14 +20,58 @@
          {% include 'form.html' %}
       </div>
 
+      <div class="reveal">
+         <!-- <h2 class="text-center mt-4 mb-4 animate__flash" class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2> -->
+         <div class="text-center mt-4 mb-4 ">
+            <h2 class="track animate__heartBeat mt-4">Live Location </h2>
+            <hr>
+         </div>
+         <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+               <img src="static/map.jpg" class="img-fluid" style="height: 360px;
+               width: 100%;
+               object-fit: cover;
+               margin-bottom: 16px;">
+            </div>
+
+            <div class="col-md-6">
+               <p class="lead">
+                  Live Location Block allows you to see the real-time location of your bus 
+                  on a map. This means you'll no longer have to wait at the bus stop 
+                  wondering when your bus will arrive or if you've missed it. With 
+                  Live Location Block, you'll have the power to track your bus and 
+                  plan your journey accordingly.<br>
+
+To use this feature, simply open Find My Bus. You'll see a live map of your 
+bus route with an icon representing the location of your bus. 
+As the bus moves along its route, the icon will update in real-time 
+to show you its exact location.
+ It's our way of making your daily commute more efficient, convenient, and stress-free.<br></p>
+ <p class="text-center"><a   href="/track" class="btn btn-dark px-4 col-md-4 text-center space" type="submit"> Track Here</a>
+ </p>
+            </div>
+
+
+            
+         </div>
+      </div>
+
+
 
       <div class="reveal">
          <!-- <h2 class="text-center mt-4 mb-4 animate__flash" class="animate__heartBeat">CONVENIENCE ON-THE-GO.</h2> -->
          <div class="text-center mt-4 mb-4 ">
-            <h2 class="wow animate__heartBeat">CONVENIENCE ON-THE-GO.</h2>
+            <div class="track">
+            <h2 class="animate__heartBeat ">CONVENIENCE ON-THE-GO.</h2></div>
             <hr>
          </div>
          <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+               <img src="static/girl.jpg" class="img-fluid" style="height: 360px;
+               width: 100%;
+               object-fit: cover;
+               margin-bottom: 16px;">
+            </div>
             <div class="col-md-6">
                <p class="lead">
                   Are you looking for a Bus ?<br>
@@ -37,12 +82,14 @@
                </p>
             </div>
 
-            <div class="d-none d-md-block col-md-6">
-               <img src="static/girl.jpg" class="animate__headShake" style="height:320px;border-radius: 4px;">
-            </div>
+           
 
          </div>
       </div>
+     
+
+
+
 
       <div class="reveal">
          {% include 'footer.html' %}
@@ -53,3 +100,10 @@
 </body>
 
 </html>
+
+
+<script>
+   ScrollReveal().reveal('.track', {
+      delay: 500
+   });
+</script>

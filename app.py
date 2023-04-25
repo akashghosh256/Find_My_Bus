@@ -19,6 +19,19 @@ def about():
 def help():
   return render_template('help.html')
 
+@app.route("/track")
+def track():
+  return render_template('track.html')
+
+@app.route("/mylocation")
+def mylocation():
+  return render_template('mylocation.html')
+
+@app.route("/pointlocation")
+def pointlocation():
+  return render_template('pointlocation.html')
+
+
 @app.route("/code")
 def  github():
   return render_template()
