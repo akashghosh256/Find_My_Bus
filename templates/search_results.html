@@ -5,7 +5,28 @@
 {% endblock %}
 
 {% block content %}
-    
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Bus No</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Detailed Route</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for bus in buses %}
+            <tr>
+                <td>{{ bus.bus_no }}</td>
+                <td>{{ bus.origin }}</td>
+                <td>{{ bus.destination }}</td>
+                <td>{{ bus.route }}</td>
+                <td><a href="#" class="delete-icon" data-bus-id="{{ bus['bus_id'] }}"><i class="fa fa-trash"></i></a></td>
+            </tr>
+        {% endfor %}
+         </tbody>
+    </table>
 {% endblock %}
 
 
