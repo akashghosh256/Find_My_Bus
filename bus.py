@@ -278,11 +278,11 @@ def search_results():
 
     # Retrieving the data for each bus in the route
     buses_ref = db.reference('buses')
-    buses_data = []
+    buses_data = {}
     for bus_id in route_data:
         bus_data = buses_ref.child(bus_id).get()
         if bus_data is not None:
-            buses_data.append(bus_data)
+            buses_data[bus_id] = {'bus_no': bus_data['bus_no'], 'origin': bus_data['origin'], 'destination': bus_data['destination'], 'route': bus_data['route']}
 
     # If no buses were found for the route, return an error message
     if len(buses_data) == 0:
