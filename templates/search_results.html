@@ -16,15 +16,19 @@
         </tr>
         </thead>
         <tbody>
-        {% for bus in buses %}
-            <tr>
-                <td>{{ bus.bus_no }}</td>
-                <td>{{ bus.origin }}</td>
-                <td>{{ bus.destination }}</td>
-                <td>{{ bus.route }}</td>
-                <td><a href="#" class="delete-icon" data-bus-id="{{ bus['bus_id'] }}"><i class="fa fa-trash"></i></a></td>
-            </tr>
-        {% endfor %}
+            {% for bus_id, bus in buses.items() %}
+                <tr>
+                    <td>{{ bus['bus_no'] }}</td>
+                    <td>{{ bus['origin'] }}</td>
+                    <td>{{ bus['destination'] }}</td>
+                    <td>{{ bus['route'] }}</td>
+                    <td>
+                        <a href="#" class="delete-icon" data-bus-id="{{ bus_id }}">
+                        <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
          </tbody>
     </table>
 {% endblock %}
