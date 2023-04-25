@@ -264,7 +264,7 @@ def search():
 @app.route('/search_results')
 def search_results():
     # Retrieving the origin and destination values from the URL parameters
-    selectedRoute = request.args.get('routes')
+    selectedRoute = request.args.get('selectedRoute')
     # destination = request.args.get('destination')
 
     # Querying the database for buses that match the origin and destination
