@@ -291,3 +291,5 @@ def search_results():
     # Return the list of buses that match the route
     return render_template('search_results.html', buses=buses_data)
 
+if __name__ == "__main__":
+  app.run(host='0.0.0.0', debug = True)
