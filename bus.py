@@ -291,5 +291,25 @@ def search_results():
     # Return the list of buses that match the route
     return render_template('search_results.html', buses=buses_data)
 
+@app.route("/about")
+def about():
+  return render_template('about.html')
+
+@app.route("/help")
+def help():
+  return render_template('help.html')
+
+@app.route("/track")
+def track():
+  return render_template('track.html')
+
+@app.route("/mylocation")
+def mylocation():
+  return render_template('mylocation.html')
+
+@app.route("/pointlocation")
+def pointlocation():
+  return render_template('pointlocation.html')
+
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug = True)
