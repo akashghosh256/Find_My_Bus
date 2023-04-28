@@ -4,6 +4,13 @@
     Your Bus Routes
 {% endblock %}
 
+{% block css %}
+    {{ super() }}
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Pjfw+zZ+sAYLbdg0+LMMc19yCYh03yBqGzFe1AKQ2XkhBThSlZoEITmDPF+RmI1cWlsfHwKr1MFbx/akLfvCsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% endblock %}
+
 {% block content %}
     <table class="table">
         <thead>
