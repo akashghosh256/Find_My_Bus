@@ -191,35 +191,6 @@ def getBusData():
     return buses_data
 
 
-# @app.route("/")
-# @app.route("/home")
-# def home_page():
-#     # Creating a reference to the buses node in the database
-#     buses_ref = db.reference('buses')
-
-#     # Retrieving the data from the buses node
-#     buses_data = buses_ref.get()
-#     #Filtering out the null values
-#     buses_data = [bus for bus in buses_data if bus is not None]
-
-#     #Storing the buses_data in a dictionary
-#     buses_dict = {bus['bus_id']: bus for bus in buses_data}
-
-#     # Initializing empty sets for storing unique origin and destination values
-#     unique_origins = set()
-#     unique_destinations = set()
-
-#     # Looping through each bus and adding its origin and destination to the respective sets
-#     for bus_data in buses_dict.values():
-#         unique_origins.add(bus_data['origin'])
-#         unique_destinations.add(bus_data['destination'])
-
-#     # Converting the sets to lists and sorting them
-#     unique_origins = sorted(list(unique_origins))
-#     unique_destinations = sorted(list(unique_destinations))
-
-#     return render_template('home.html', unique_origins=unique_origins, unique_destinations=unique_destinations)
-
 
 @app.route("/")
 @app.route("/home")
