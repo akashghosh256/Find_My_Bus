@@ -4,14 +4,10 @@
     Your Bus Routes
 {% endblock %}
 
-{% block css %}
-    {{ super() }}
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Pjfw+zZ+sAYLbdg0+LMMc19yCYh03yBqGzFe1AKQ2XkhBThSlZoEITmDPF+RmI1cWlsfHwKr1MFbx/akLfvCsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-{% endblock %}
-
 {% block content %}
+    {% include "nav.html" %}
+
+    
     <table class="table">
         <thead>
         <tr>
@@ -29,15 +25,18 @@
                     <td>{{ bus['origin'] }}</td>
                     <td>{{ bus['destination'] }}</td>
                     <td>{{ bus['route'] }}</td>
-                    <td>
+                    <!-- <td>
                         <a href="#" class="delete-icon" data-bus-id="{{ bus_id }}">
                         <i class="fa fa-trash"></i>
                         </a>
-                    </td>
+                    </td> -->
                 </tr>
             {% endfor %}
          </tbody>
     </table>
+
+    <p class="text-center"><a   href="/" class="btn btn-dark btn-lg text-center space mt-4" type="submit"> Back </a>
+    </p>
 {% endblock %}
 
 
