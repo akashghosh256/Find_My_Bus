@@ -1,3 +1,4 @@
 Flask
 gunicorn
 pyrebase5
+firebase-admin==5.0.0
