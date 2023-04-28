@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Your Bus Routes
+{% endblock %}
+
+{% block content %}
+    {% include "nav.html" %}
+
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Bus No</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Detailed Route</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for bus_id, bus in buses.items() %}
+                <tr>
+                    <td>{{ bus['bus_no'] }}</td>
+                    <td>{{ bus['origin'] }}</td>
+                    <td>{{ bus['destination'] }}</td>
+                    <td>{{ bus['route'] }}</td>
+                    <!-- <td>
+                        <a href="#" class="delete-icon" data-bus-id="{{ bus_id }}">
+                        <i class="fa fa-trash"></i>
+                        </a>
+                    </td> -->
+                </tr>
+            {% endfor %}
+         </tbody>
+    </table>
+
+    <p class="text-center"><a   href="/" class="btn btn-dark btn-lg text-center space mt-4" type="submit"> Back </a>
+    </p>
+{% endblock %}
+
+

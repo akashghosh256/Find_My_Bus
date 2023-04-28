@@ -4,11 +4,13 @@
 <title>Track</title>
 
 
-<h2 class="animate-charcter text-center">Track Now !</h2>
-<div class="row">
+<h2 class="animate__heartBeat text-center">Track Now !</h2>
+
+
+<div class="row px-4">
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
-            <img class="card-img-top" src="static/compass.jpg" alt="">
+            <img class="card-img-top" src="static/comp.jpg" alt="">
             <div class="card-body">
                 <h4 class="card-title animate-charcter text-center">Your present location</h4>
                 <p class="card-text text-center"> <a   href="/mylocation" class="btn btn-dark px-4 col-md-4 text-center space" type="submit"> Track Here</a>
@@ -30,4 +32,12 @@
             </div>
         </div>
     </div>
+    
+    <div class="container mt-4">
+        <div class="alert alert-info" role="alert">
+          <strong>Note:</strong> The accuracy of the map displayed on this pages depends on OpenStreetMap, not us. We cannot guarantee its accuracy or completeness.
+        </div>
+      </div>
+      
+
     {% include 'footer.html' %}

@@ -1,3 +1,11 @@
-
+.env
+serviceAccountKey.json
+templates\home1.html
+templates\image_slides.html
+templates\nav.html
+templates\form.html 
+templates\footer1.html 
+templates\footer.html 
+templates\bootstrap.html 
 example.html
-example.html
+app.py
