@@ -145,36 +145,6 @@ def creating_routes():
     routes_ref.set(routes_dict)
     return "Routes added successfully!"
 
-# @app.route("/getOriDest")
-# def getOriDest():
-#     # Creating a reference to the buses node in the database
-#     buses_ref = db.reference('buses')
-
-#     # Retrieving the data from the buses node
-#     buses_data = buses_ref.get()
-#     #Filtering out the null values
-#     buses_data = [bus for bus in buses_data if bus is not None]
-
-#     #Storing the buses_data in a dictionary
-#     buses_dict = {bus['bus_id']: bus for bus in buses_data}
-
-#     # Initializing empty sets for storing unique origin and destination values
-#     unique_origins = set()
-#     unique_destinations = set()
-
-#     # Looping through each bus and adding its origin and destination to the respective sets
-#     for bus_id, bus_data in buses_dict.items():
-#         unique_origins.add(bus_data['origin'])
-#         unique_destinations.add(bus_data['destination'])
-
-#     # Counting the number of unique origin and destination values
-#     num_origins = len(unique_origins)
-#     num_destinations = len(unique_destinations)
-
-#     # Returning the unique origin and destination sets as a response to the client
-#     return f"Unique origins: {unique_origins}, Unique destinations: {unique_destinations}" + f"Unique Origin Count: {num_origins}, Unique destinations count: {num_destinations}"
-
-
 
 @app.route('/getArrivalData')
 def getArrivalData():
