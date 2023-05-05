@@ -57,22 +57,22 @@ def insertdata():
         return 'Data inserted successfully!'
     
 # Defining the endpoint to update the data
-# @app.route('/updatedata')
-# def updatedata():
-#     # Loading the CSV file
-#     with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES - Sheet1.csv") as csvfile:
-#         reader = csv.DictReader(csvfile)
-#         # Creating a reference to the 'buses' node in the database
-#         buses_ref = db.reference('buses')
-#         # Looping through each row in the CSV file and updating the route field of the corresponding child node
-#         for row in reader:
-#             # Using the Bus ID as the key for the child node
-#             bus_id = row['bus_id']
-#             # Creating a reference to the child node using the bus ID
-#             bus_ref = buses_ref.child(bus_id)
-#             # Updating the 'route' field of the child node
-#             bus_ref.update({'bus_id': row['bus_id']})
-#         return 'Data updated successfully!'
+@app.route('/updatedata')
+def updatedata():
+    # Loading the CSV file
+    with open("C:\\Users\\HP\\Downloads\\BUS_ROUTES - Sheet1.csv") as csvfile:
+        reader = csv.DictReader(csvfile)
+        # Creating a reference to the 'buses' node in the database
+        buses_ref = db.reference('buses')
+        # Looping through each row in the CSV file and updating the route field of the corresponding child node
+        for row in reader:
+            # Using the Bus ID as the key for the child node
+            bus_id = row['bus_id']
+            # Creating a reference to the child node using the bus ID
+            bus_ref = buses_ref.child(bus_id)
+            # Updating and adding the 'bus_fare' field to the child node
+            bus_ref.update({'bus_fare': row['bus_fare']})
+        return 'Data updated successfully!'
     
 @app.route('/departure')
 def departure():
