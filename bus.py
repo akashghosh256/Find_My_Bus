@@ -192,7 +192,6 @@ def home_page():
 def search():
     # Retrieving the origin and destination values from the form data
     selectedRoute = request.form['routes']
-    # destination = request.form['destination']
 
     # Generating the URL for the search results page
     search_url = url_for('search_results', selectedRoute = selectedRoute)
@@ -204,13 +203,11 @@ def search():
 # Route for the search results page
 @app.route('/search_results')
 def search_results():
-    # Retrieving the origin and destination values from the URL parameters
+    # Retrieving the route values from the URL parameters
     selectedRoute = request.args.get('selectedRoute')
-    # destination = request.args.get('destination')
 
-    # Querying the database for buses that match the origin and destination
+    # Querying the database for buses that match the route
     routes_ref = db.reference('routes')
-    # route_key = f"{origin}-{destination}"
     route_data = routes_ref.child(selectedRoute).get()
 
     # If the route doesn't exist, returning an error message
@@ -223,7 +220,7 @@ def search_results():
     for bus_id in route_data:
         bus_data = buses_ref.child(bus_id).get()
         if bus_data is not None:
-            buses_data[bus_id] = {'bus_no': bus_data['bus_no'], 'origin': bus_data['origin'], 'destination': bus_data['destination'], 'route': bus_data['route']}
+            buses_data[bus_id] = {'bus_no': bus_data['bus_no'], 'origin': bus_data['origin'], 'destination': bus_data['destination'], 'route': bus_data['route'], 'bus_fare': bus_data['bus_fare']}
 
     # If no buses were found for the route, return an error message
     if len(buses_data) == 0:

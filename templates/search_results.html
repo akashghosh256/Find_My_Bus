@@ -15,7 +15,7 @@
             <th scope="col">Origin</th>
             <th scope="col">Destination</th>
             <th scope="col">Detailed Route</th>
-            <th scope="col"></th>
+            <th scope="col"> Bus Fares</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +25,8 @@
                     <td>{{ bus['origin'] }}</td>
                     <td>{{ bus['destination'] }}</td>
                     <td>{{ bus['route'] }}</td>
+                    <td>{{ bus['bus_fare'] }}</td>
+
                     <!-- <td>
                         <a href="#" class="delete-icon" data-bus-id="{{ bus_id }}">
                         <i class="fa fa-trash"></i>
