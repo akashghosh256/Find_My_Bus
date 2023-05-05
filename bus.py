@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, url_for, redirect
 import firebase_admin 
 from firebase_admin import credentials, db
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 import csv 
 
-load_dotenv()  # Loading environment variables from .env file
+#load_dotenv()  # Loading environment variables from .env file
 
 app = Flask(__name__)
 
