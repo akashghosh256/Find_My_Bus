@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
-import firebase_admin
+import firebase_admin 
 from firebase_admin import credentials, db
 from dotenv import load_dotenv
 import os
