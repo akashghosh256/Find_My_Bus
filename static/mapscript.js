@@ -118,7 +118,7 @@ var point2 = L.latLng(lat, long); // Los Angeles
 
 // Calculate the distance between the two points in meters
 var distance = (point1.distanceTo(point2))/1000;
-document.getElementById('length').innerHTML = distance.toFixed(2) + " km from your location" + "<br> Average time: " + (distance.toFixed(2)/24.5).toFixed(2) + " hrs";
+document.getElementById('length').innerHTML = distance.toFixed(2) + " km from your location" + "<br>time: " + (distance.toFixed(2)/24.5).toFixed(2) + " hrs";
 
 console.log("it is -----"+distance); // Output: 535161.6335689421 meters
 
