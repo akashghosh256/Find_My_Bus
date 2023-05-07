@@ -1,3 +1,6 @@
+# This file is used to install all the dependencies required for the project.
+# (currently for render.com deployment)
+
 Flask
 gunicorn
 pyrebase5
