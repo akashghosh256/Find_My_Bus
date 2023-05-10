@@ -177,7 +177,7 @@ def home_page():
 
     #Creating an empty list to store the route values
     eachRoute = []
-    uniqueRoutes = list(set(eachRoute))
+    
 
     # Looping through each bus and adding it to the appropriate route
     for bus_id, bus_data in buses_dict.items():
@@ -185,7 +185,8 @@ def home_page():
         destination = bus_data['destination']
         route_key = f"{origin}-{destination}"
         eachRoute.append(route_key)
-
+    
+    uniqueRoutes = list(set(eachRoute))
     return render_template('home.html', eachRoute = uniqueRoutes)
 
 # Route for the search page
