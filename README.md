@@ -1,6 +1,8 @@
 # Find My Bus
 
-Find My Bus is a web application that allows users to track the location of buses in real-time using Flask, HTML, Bootstrap, Firebase, and OpenStreetMap.
+Find My Bus is a web application that allows users to find buses with estimated fares by route or destination. While the project includes a location tracking feature, please be aware that this feature is currently in a demo/simulation mode and does not provide real-time bus location data. We are actively working on improving this feature.
+
+In the meantime, you can still use the application to find buses and estimated fares based on route or destination. We apologize for any inconvenience and appreciate your understanding as we continue to enhance this functionality.
 
 ## Features
 
@@ -18,7 +20,7 @@ Find My Bus is a web application that allows users to track the location of buse
 
 ## Usage
 
-1. Visit the hosted application in your web browser at [URL](https://findmybus.onrender.com/) where `URL` is the link to your hosted website.
+1. Visit the hosted application in your web browser at [URL](https://findmybus.onrender.com/) 
 
 2. Use the search functionality to find buses by route or destination.
 
