@@ -24,14 +24,7 @@ In the meantime, you can still use the application to find buses and estimated f
 
 2. Use the search functionality to find buses by route or destination.
 
-3. Click on a bus marker on the map to view detailed information about the selected bus.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- Thanks to the open-source community for providing the tools and libraries that made this project possible.
-
-Happy tracking!
+Happy Searching!
